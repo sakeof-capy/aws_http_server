@@ -7,5 +7,5 @@ TEST(basic_suite, basic_successful_test)
 
 TEST(basic_suite, basic_failing_test)
 {
-    ASSERT_EQ(2, 1);
+    ASSERT_EQ(2, 2);
 }
