@@ -27,7 +27,6 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
@@ -399,9 +398,6 @@ FodyWeavers.xsd
 *.vcxproj.filters
 
 .idea/
-0_root/include/di_generated/DI.hpp
-0_root/src/di_generated/DI.cpp
-_prebuild/
 
 # CMake
 cmake-build-*/
