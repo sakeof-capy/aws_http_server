@@ -1,0 +1,33 @@
+name: C++ CI with Google Test
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - 'feature/*'  # Add other branches you want to monitor
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Or use windows-latest or macos-latest based on your environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake g++
+
+      - name: Build tests
+        run: |
+          mkdir build
+          cmake -B build
+          cmake --build build -j $(nproc)
+
+      - name: Run Google Test
+        run: ./tests/tests
