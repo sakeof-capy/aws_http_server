@@ -32,4 +32,4 @@ jobs:
           cmake --build build -j $(nproc)
 
       - name: Run Google Test
-        run: ./tests/tests
+        run: ./build/tests/tests
